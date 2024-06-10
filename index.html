@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #0b3d0b, #196619);
+            color: #f0f0f0;
+        }
+
+        .container {
+            background: rgba(20, 55, 20, 0.9); /* Fundo semi-transparente */
+        }
+
+        input, select {
+            background: rgba(30, 70, 30, 0.8); /* Input com fundo semi-transparente */
+            color: #ffffff; /* Texto branco brilhante */
+            box-shadow: 0 0 10px rgba(0, 128, 0, 0.5); /* Sombra verde */
+        }
+
+        input::placeholder, select::placeholder {
+            color: #b0b0b0; /* Placeholder cinza claro */
+        }
+
+        option {
+            background: rgba(30, 70, 30, 0.8); /* Fundo dos options */
+            color: #ffffff; /* Cor do texto dos options */
+        }
+
+        input[type="checkbox"] {
+            accent-color: #28a745; /* Cor do checkbox */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+    <div class="container mx-auto max-w-md p-8 bg-black rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-6 text-center text-gray-100">Cadastro</h2>
+        <form>
+            <label for="fullName" class="block text-sm font-medium text-gray-200">Nome Completo:</label>
+            <input type="text" id="fullName" name="fullName" required class="mt-1 mb-4 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="Digite seu nome">
+
+            <label for="email" class="block text-sm font-medium text-gray-200">Email:</label>
+            <input type="email" id="email" name="email" required class="mt-1 mb-4 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="Digite seu email">
+
+            <label for="matricula" class="block text-sm font-medium text-gray-200">Número de Matrícula:</label>
+            <input type="text" id="matricula" name="matricula" required class="mt-1 mb-4 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="Digite sua matrícula">
+
+            <label for="sexo" class="block text-sm font-medium text-gray-200">Sexo:</label>
+            <select id="sexo" name="sexo" required class="mt-1 mb-4 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                <option value="" class="text-gray-700 bg-gray-800">Selecione</option>
+                <option value="masculino" class="text-gray-700 bg-gray-800">Masculino</option>
+                <option value="feminino" class="text-gray-700 bg-gray-800">Feminino</option>
+                <option value="outro" class="text-gray-700 bg-gray-800">Outro</option>
+            </select>
+
+            <label for="nascimento" class="block text-sm font-medium text-gray-200">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento" required class="mt-1 mb-4 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+
+            <label for="estado" class="block text-sm font-medium text-gray-200">Estado:</label>
+            <select id="estado" name="estado" required class="mt-1 mb-4 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                <option value="" class="text-gray-700 bg-gray-800">Selecione</option>
+                <option value="AC" class="text-gray-700 bg-gray-800">Acre</option>
+                <option value="AL" class="text-gray-700 bg-gray-800">Alagoas</option>
+                <option value="AP" class="text-gray-700 bg-gray-800">Amapá</option>
+                <option value="AM" class="text-gray-700 bg-gray-800">Amazonas</option>
+                <option value="BA" class="text-gray-700 bg-gray-800">Bahia</option>
+                <option value="CE" class="text-gray-700 bg-gray-800">Ceará</option>
+                <option value="DF" class="text-gray-700 bg-gray-800">Distrito Federal</option>
+                <option value="ES" class="text-gray-700 bg-gray-800">Espírito Santo</option>
+                <option value="GO" class="text-gray-700 bg-gray-800">Goiás</option>
+                <option value="MA" class="text-gray-700 bg-gray-800">Maranhão</option>
+                <option value="MT" class="text-gray-700 bg-gray-800">Mato Grosso</option>
+                <option value="MS" class="text-gray-700 bg-gray-800">Mato Grosso do Sul</option>
+                <option value="MG" class="text-gray-700 bg-gray-800">Minas Gerais</option>
+                <option value="PA" class="text-gray-700 bg-gray-800">Pará</option>
+                <option value="PB" class="text-gray-700 bg-gray-800">Paraíba</option>
+                <option value="PR" class="text-gray-700 bg-gray-800">Paraná</option>
+                <option value="PE" class="text-gray-700 bg-gray-800">Pernambuco</option>
+                <option value="PI" class="text-gray-700 bg-gray-800">Piauí</option>
+                <option value="RJ" class="text-gray-700 bg-gray-800">Rio de Janeiro</option>
+                <option value="RN" class="text-gray-700 bg-gray-800">Rio Grande do Norte</option>
+                <option value="RS" class="text-gray-700 bg-gray-800">Rio Grande do Sul</option>
+                <option value="RO" class="text-gray-700 bg-gray-800">Rondônia</option>
+                <option value="RR" class="text-gray-700 bg-gray-800">Roraima</option>
+                <option value="SC" class="text-gray-700 bg-gray-800">Santa Catarina</option>
+                <option value="SP" class="text-gray-700 bg-gray-800">São Paulo</option>
+                <option value="SE" class="text-gray-700 bg-gray-800">Sergipe</option>
+                <option value="TO" class="text-gray-700 bg-gray-800">Tocantins</option>
+            </select>
+
+            <label for="endereco" class="block text-sm font-medium text-gray-200">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required class="mt-1 mb-4 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="Digite seu endereço">
+
+            <div class="flex items-center mb-4">
+                <input id="salvarInformacoes" name="salvarInformacoes" type="checkbox" class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                <label for="salvarInformacoes" class="ml-2 block text-sm text-gray-200">Salvar minhas informações para o próximo cadastro</label>
+            </div>
+
+            <button type="submit" class="w-full py-2 px-4 bg-green-600 text-white font-medium rounded-md shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+                Enviar
+            </button>
+        </form>
+    </div>
+</body>
+</html>
